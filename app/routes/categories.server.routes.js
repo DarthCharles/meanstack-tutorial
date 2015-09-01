@@ -9,5 +9,9 @@ module.exports = function(app) {
 
   // the categoryId param is added to the params object for the request
   app.route('/categories/:categoryId')
-  .get(categories.read);
+  .get(categories.read)
+  .put(categories.update)
+  .delete(categories.delete);
+
+	app.param('categoryId', categories.categoryByID);
 };

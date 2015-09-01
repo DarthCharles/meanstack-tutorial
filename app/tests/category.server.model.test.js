@@ -1,4 +1,4 @@
-
+'use strict';
 /**
 * Module dependencies.
 */
@@ -6,11 +6,10 @@ var should = require('should'),
 mongoose = require('mongoose'),
 Category = mongoose.model('Category');
 
+
 /**
 * Unit tests
 */
-describe('Category Model', function() {
-
 	describe('Saving', function() {
 		it('saves new record', function(done) {
 			var category = new Category({
@@ -70,9 +69,9 @@ describe('Category Model', function() {
 			});
 		});
 	});
+
 	afterEach(function(done) {
 		// NB this deletes ALL categories (but is run against a test database)
 		Category.remove().exec();
 		done();
 	});
-});
