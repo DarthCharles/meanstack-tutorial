@@ -11,10 +11,10 @@ function validateLength(v) {
 return v.length <= 40;
 }
 /**
-* Products Schema
+* Product Schema
 */
-var ProductsSchema = new Schema({
-	// Products model fields
+var ProductSchema = new Schema({
+	// Product model fields
 	category: {
 		type: Schema.Types.ObjectId,
 		ref: 'Category',
@@ -55,4 +55,4 @@ var ProductsSchema = new Schema({
 
 });
 
-mongoose.model('Products', ProductsSchema);
+mongoose.model('Product', ProductSchema);

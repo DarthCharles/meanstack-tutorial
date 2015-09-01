@@ -10,7 +10,9 @@ Category = mongoose.model('Category');
 /**
 * Unit tests
 */
-	describe('Saving', function() {
+describe('Category Model Unit Tests:', function() {
+
+	describe('Method Save', function() {
 		it('saves new record', function(done) {
 			var category = new Category({
 				name: 'Beverages',
@@ -70,8 +72,15 @@ Category = mongoose.model('Category');
 		});
 	});
 
+	describe('Method Delete', function(){
+		it('deletes a record',function(){
+
+		});
+	});
+
 	afterEach(function(done) {
 		// NB this deletes ALL categories (but is run against a test database)
 		Category.remove().exec();
 		done();
 	});
+});
