@@ -1,0 +1,32 @@
+#Add controller
+yo meanjs:express-controller products
+
+#Add model
+yo meanjs:express-model product
+
+#Add routes
+yo meanjs:express-route products
+
+#With everything and balls
+yo meanjs:crud-module products
+
+#Angular Module (Kind of namespace but not quite)
+yo meanjs:angular-module categories
+
+#Angular Change the UI
+yo meanjs:angular-config categories
+
+#Angular routing
+yo meanjs:angular-route categories
+
+#Angular View
+yo meanjs:angular-view create-category
+
+
+#COMMANDS
+curl -H "Content-Type: application/json" -X PUT -d '{"name" : "Comidita","description" : "Soft drinks, coffees, teas, beers, wines and ales"}' http://localhost:3000/categories/55e4d0f3638b637906cb0cd6
+
+curl -H "Content-Type: application/json" -X DELETE http://localhost:3000/categories/55db9e9793025ad360ecabb0
+
+curl -H "Content-Type: application/json" -d '{"name" : "Beverages",
+					      "description" : "Soft drinks, coffees, teas, beers, and ales"}' http://localhost:3000/categories
